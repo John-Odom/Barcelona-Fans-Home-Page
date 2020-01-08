@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang=en> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GSAP SPA</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <div class ='nav-closed'>
+                    <h3>Portfolio</h3>
+                    <ul class ='nav-links'>
+                        <li class= 'nav-button'>Shop</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class ='nav-opened'>
+                    <div class ="clothing">
+                        <h2>Clothes</h2>
+                        <ul>
+                            <li><a href="#">Hats</a></li>
+                            <li><a href="#">Swimsuits</a></li>
+                            <li><a href="#">Underwear</a></li>
+                            <li><a href="#">Misc</a></li>
+                        </ul>
+                    </div>
+                    <div class='nav-images'>
+                        <img src="./images/hoodie.jpeg" alt="Hoodie">
+                        <img src="./images/hat.jpeg" alt="Hat">
+                        
+                    </div>
+                </div>
+            </nav>
+            <img class="cover" src="./images/cover.jpeg" alt="Cover">
+            <h1 class="cover-date">1/8/2020</h1>
+        </header>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js'></script>
+        <script src="app.js"></script>
+    </body>
+</html>
