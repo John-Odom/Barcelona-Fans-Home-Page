@@ -35,19 +35,20 @@ header {
 }
 
 nav {
-    background: white;
+    background: #EDBB00;
     z-index: 2;
-    height: 20%;
-    width: 40%;
-    color: #916356;
+    height: 13%;
+    width: 20%;
+    color: #A50044;
+    font-weight: bold;
 }
 
 .nav-closed {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 20%;
-    width: 40%;
+    height: 13%;
+    width: 20%;
     position: absolute;
 }
 
@@ -60,9 +61,9 @@ nav {
 
 .nav-opened{
     position: absolute;
-    top: 20%;
-    height: 80%;
-    width: 40%;
+    top: 13%;
+    height: 90%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -74,32 +75,92 @@ nav {
 .clothing {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
+    height: 100%;
 }
 
-.clothing h2 {
+/* .clothing h2 {
     font-size: 50;
-}
+} */
 
 .clothing ul {
+    z-index: 2;
     list-style: none;
-}
-
-.nav-images {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
 }
 
-.clothing ul li {
-    padding-bottom: 10px;
+.info-li{
+    /* justify-content: space-around; */
+    padding: 10%;
+    height:12.1%;
+    width:100%;
+    border-bottom: 3px solid #EDBB00;
+    text-align: center;
+    background-image: url('./images/horizontal-flash@x2.jpg');
 }
 .clothing ul li a {
     text-decoration: none;
-    color: #916356;
+    color: #EDBB00;
+    font-weight: 800;
+    font-size: x-large;
 }
 
-.nav-images img {
-    height: 250px;
+#trophy-list{
+    display: flex;
+    width: 80%;
+    height: 20%;
+    top: 0;
+    right:0;
+    position: absolute;
+    justify-content: space-around;
+    list-style: none;
+    z-index: 2;
+    align-items: center;
+    padding-left: 3%;
 }
+
+.trophies{
+    width: 85%;
+}
+
+#leo-gif{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 40%;
+}
+#grizzi-gif{
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    top: 25%;
+    left: 1%;
+    max-height: 40%;
+}
+#umtiti-gif{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 40%;
+}
+#forca-gif{
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    max-height: 20%;
+}
+
+/* .nav-images img {
+    height: 250px;
+} */
+
+/* .nav-images {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+} */

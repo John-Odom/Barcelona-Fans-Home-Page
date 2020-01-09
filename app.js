@@ -1,12 +1,35 @@
-const navButton = document.querySelector('.nav-button');
+const hideGif = new TimelineLite({ paused: true, reversed: true });
+const trophies = new TimelineLite({ paused: true, reversed: true });
+const navBar = new TimelineLite({ paused: true, reversed: true });
 const navOpen = document.querySelector('.nav-opened');
+const navButton = document.querySelector('.nav-button');
+const leoGif = document.querySelector('#leo-gif');
 
-// const tl = new TimelineLite({});
-const tl = new TimelineLite({ paused: true, reversed: true });
+document.addEventListener('DOMContentLoaded', () => {
+    toggleTween(trophies)
+    toggleTween(hideGif)
+})
 
-tl.to('.cover', 1, {
-    width: "60%",
-    ease: Power2.easeOut
+trophies.from('#trophy-list', 3, { y:"1000%", ease:Power4.easeOut})
+hideGif.to('#leo-gif', 3, {opacity:0}, 3)
+.to('#grizzi-gif', 1,{opacity:1}, '-=2')
+.to('#grizzi-gif', 0.5,{opacity:0})
+.to('#umtiti-gif', 1,{opacity:1}, '-=1')
+.to('#umtiti-gif', 0.5,{opacity:0})
+.to('#forca-gif', 3,{opacity:1})
+
+
+navButton.addEventListener('click', (e) => {
+    if (navBar.isActive()) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false
+    }
+    toggleTween(navBar)
+})
+navBar.to('.cover', 1, {
+    width: "80%",
+    ease: "back.out"
 })
 .to('nav', 0.5, 
     {
@@ -15,10 +38,10 @@ tl.to('.cover', 1, {
     }, 
     '-=0.5'
 )
-.fromTo('.nav-opened', 0.5, {
+.fromTo('.nav-opened', 1, {
     opacity: 0,
-    x: 50,
-    ease: Power2.easeOut
+    x: 100,
+    ease: "bounce.out"
 }, {
     opacity:1,
     x:0,
@@ -28,16 +51,10 @@ tl.to('.cover', 1, {
 }   
 )
 
-navButton.addEventListener('click', (e) => {
-    if (tl.isActive()){
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        return false
-    }
-
-    toggleNavOpen(tl)
-})
-
-toggleNavOpen = (tween) =>{
+toggleTween = (tween) =>{
     tween.reversed() ? tween.play() : tween.reverse();
 }
+
+var today = new Date();
+let date = today.toString().split(' ')
+document.querySelector('.cover-date').innerText = `${date[0]} ${date[1]} ${date[2]}, ${date[3]}`
