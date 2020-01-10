@@ -51,6 +51,9 @@ nav {
     width: 20%;
     position: absolute;
 }
+.nav-button {
+    cursor: pointer;
+} 
 
 .nav-closed ul {
     display: flex;
